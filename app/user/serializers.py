@@ -1,5 +1,3 @@
-from django.contrib.auth import get_user_model
-
 from rest_framework import serializers
 
 from django.contrib.auth import get_user_model, authenticate
@@ -28,6 +26,7 @@ class UserSerializer(serializers.ModelSerializer):
             user.save()
 
         return user
+
 
 class AuthTokenSerializer(serializers.Serializer):
     """Serializer for the user authentication object"""
